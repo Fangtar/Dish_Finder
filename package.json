@@ -1,0 +1,30 @@
+{
+  "name": "dish_finder",
+  "version": "1.0.0",
+  "description": "FInd the best dishes you need",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fangtar/Dish_Finder.git"
+  },
+  "keywords": [
+    "food"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fangtar/Dish_Finder/issues"
+  },
+  "homepage": "https://github.com/Fangtar/Dish_Finder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.3.8",
+    "nodemon": "^1.18.5"
+  }
+}
