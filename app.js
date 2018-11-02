@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
 app.get('/', (req,res)=>{
-    res.send('Hello!');
+    res.render("home.handlebars")
 })
 
 app.listen(5000, ()=>{
