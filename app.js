@@ -18,3 +18,5 @@ app.get('/', (req,res)=>{
 app.listen(5000, ()=>{
     console.log('App listening to port 5000');
 })
+
+// Get rating pictures for yelp rating from here https://www.yelp.com/developers/display_requirements
