@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-var exphbs = require('express-handlebars');
+const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
@@ -10,6 +10,7 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
+app.use(express.static('views/images'));
 
 app.get('/', (req,res)=>{
     res.render("home.handlebars")

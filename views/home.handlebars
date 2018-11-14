@@ -1,1 +1,49 @@
-<h1> Hello there!!! </h1>
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+input[type=text] {
+    width: 500px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    /* background-image: url('searchicon.png'); */
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.7s ease-in-out;
+}
+input[type=text]:focus {
+    width: 100%;
+}
+.front-page{
+    background: url('https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9&s=16f0055167b904922796ac61252fca72');
+    background-size: cover;
+    padding-bottom: 30%;
+    height: 1000px;
+}
+.navbar{
+    margin-bottom: 0px;
+}
+#search-label{
+    margin-top: 0px;
+    color: white;
+}
+</style>
+
+<div class = "front-page">
+    <div class="jumbtron text-center">
+        <h2 id="search-label">Find the food you want to eat:  </h2>
+        <br>
+    </div>
+    <div class="jumbtron text-center">
+        <form>
+            <input id="an_address" type="text" name="search" placeholder="Burrito, Salad etc ">
+        </form>
+        <br>
+        <button id="getSchools" type="submit" class="btn btn-primary btn-lg"  >Submit</button>
+    </div>
+</div>
