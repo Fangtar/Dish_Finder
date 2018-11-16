@@ -1,1 +1,10 @@
-<h1> My name is Aktar </h1>
+{{#each results}}
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" style="max-width: 18rem;" src="{{this.image_url}}" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+        <p class="card-text">{{this.location.display_address}}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>
+{{/each}}

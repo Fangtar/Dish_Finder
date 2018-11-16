@@ -61,16 +61,16 @@ body{
 
 
 <div class = "front-page">
-    <div class="jumbtron1 text-center">
+    <div class="jumbtron text-center">
         <h2 id="search-label">Find the food you want to eat:  </h2>
         <br>
     </div>
-    <div class="jumbtron2 text-center">
-        <form>
-            <input id="an_address" type="text" name="search" placeholder="Burrito, Salad etc ">
+    <div class="jumbtron text-center">
+        <form action="/stores" method="GET">
+            <input id="search-term" type="text" name="term" placeholder="Burrito, Salad etc ">
+            <input id="location" type="text" name="location" placeholder="Berkeley, CA">
+            <button id="submit" type="submit" class="btn btn-primary btn-lg" >Submit</button>
         </form>
-        <br>
-        <button id="getSchools" type="submit" class="btn btn-primary btn-lg" >Submit</button>
     </div>
 </div>
 
