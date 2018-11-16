@@ -21,7 +21,7 @@ module.exports = app => {
             // const firstResult = response.jsonBody.businesses[2];
             // const prettyJson = JSON.stringify(firstResult, null, 4);
             // console.log(prettyJson);
-            res.render("show-results", {results: results})
+            res.render("show-results", {results: results, query: query_input})
         }).catch((err) => {
             console.log(err.message);
         });

@@ -6,12 +6,16 @@ const methodOverride = require('method-override');
 const stores = require('./controllers/stores.js');
 
 const app = express();
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.engine('handlebars', exphbs({
+    defaultLayout: 'main',
+    helpers: require("./public/javascript/helpers.js").helpers
+}));
 app.set('view engine', 'handlebars');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(express.static('views/images'));
+app.use(express.static('public'));
 
 stores(app);
 
