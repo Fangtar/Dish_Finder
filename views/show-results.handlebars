@@ -1,26 +1,39 @@
 <style media="screen">
-    .parent-div{
-        height: 50vh;
-        /* position: absolute; */
-    }
-    #map{
-        height: 50vh;
-    }
+.parent-div{
+    height: 100vh;
+    max-width: none;
+    /* position: absolute; */
+}
+#map{
+    height: 100vh;
+    max-width: none;
+}
 </style>
 
-<div class="parent-div">
-    <div id="map"></div>
-</div>
-{{#each results}}
-<div class="card" style="width: 18rem;">
-    <img class="card-img-top" style="max-width: 18rem;" src="{{this.image_url}}" alt="Card image cap">
-    <div class="card-body">
-        <h5 class="card-title">{{this.name}}</h5>
-        <p class="card-text">{{this.location.display_address}}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            {{#each results}}
+            <div class="card">
+                <!-- <img class="card-img-top" style="max-width: 18rem;" src="{{this.image_url}}" alt="Card image cap"> -->
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <p class="card-text">{{this.location.display_address}}</p>
+                    <p class="card-text">Latte</p>
+                    <p class="card-text">Cappuccino</p>
+                    <p class="card-text">Mocha</p>
+                    <!-- <p class="card-text">{{this.location.display_address}}</p> -->
+                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <div class="parent-div col sticky-top">
+            <div id="map"></div>
+        </div>
     </div>
 </div>
-{{/each}}
+
 
 <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=places" async defer></script>
 <script type="text/javascript">
@@ -57,10 +70,10 @@ function initMap(){
                 let resPosition = new google.maps.LatLng(result.coordinates.latitude, result.coordinates.longitude);
                 console.log(resPosition);
                 var marker = new google.maps.Marker({
-                  map: map,
-                  // icon: image,
-                  title: result.name,
-                  position: resPosition
+                    map: map,
+                    // icon: image,
+                    title: result.name,
+                    position: resPosition
                 });
                 marker.addListener('click', function(){
                     let infowindow = new google.maps.InfoWindow({
@@ -85,10 +98,10 @@ function callback(results, status){
             // console.log(place);
             // createMarkers(results[i])
             var marker = new google.maps.Marker({
-              map: map,
-              // icon: image,
-              title: place.name,
-              position: place.geometry.location
+                map: map,
+                // icon: image,
+                title: place.name,
+                position: place.geometry.location
             });
             marker.addListener('click', function(){
                 let infowindow = new google.maps.InfoWindow({
