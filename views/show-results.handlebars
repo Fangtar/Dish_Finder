@@ -19,9 +19,9 @@
                 <div class="card-body">
                     <h5 class="card-title">{{this.name}}</h5>
                     <p class="card-text">{{this.location.display_address}}</p>
-                    <p class="card-text">Latte</p>
-                    <p class="card-text">Cappuccino</p>
-                    <p class="card-text">Mocha</p>
+                    {{#each this.dishResult}}
+                        <p class="card-text">{{this.name}}</p>
+                    {{/each}}
                     <!-- <p class="card-text">{{this.location.display_address}}</p> -->
                     <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>

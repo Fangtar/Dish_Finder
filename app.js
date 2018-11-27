@@ -17,6 +17,8 @@ app.use(methodOverride('_method'));
 app.use(express.static('views/images'));
 app.use(express.static('public'));
 
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/dish-finder', { useMongoClient: true });
+
 stores(app);
 
 app.get('/', (req,res)=>{
