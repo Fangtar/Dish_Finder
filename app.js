@@ -37,7 +37,7 @@ app.get('/', (req,res) => {
     unsplash.photos.getRandomPhoto({ query: "Food"})
       .then(toJson)
       .then(json => {
-          res.render("home.handlebars", { randomImageURL: json.urls.full })
+          res.render("home.handlebars", { randomImageURL: json.urls.regular })
     });
 })
 
