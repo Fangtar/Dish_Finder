@@ -4,6 +4,18 @@ const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const stores = require('./controllers/stores.js');
+// const require('es6-promise').polyfill();
+const isomorphic = require('isomorphic-fetch');
+
+// Require syntax
+const Unsplash = require('unsplash-js').default;
+const toJson = require("unsplash-js").toJson;
+
+const unsplash = new Unsplash({
+    applicationId:"58542430bee9cfc91faa9dd2a463994315a568c02e82f60ced38b44a45a86f55",
+    secret: "2eb81bf8ac1736f007d1d8dff32dff131cbee93039f6fda0be87ed861ae868f9",
+    callbackUrl: "http://unsplash-js.herokuapp.com"
+});
 
 const app = express();
 app.engine('handlebars', exphbs({
@@ -21,8 +33,12 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/dish-finder', {
 
 stores(app);
 
-app.get('/', (req,res)=>{
-    res.render("home.handlebars")
+app.get('/', (req,res) => {
+    unsplash.photos.getRandomPhoto({ query: "Food"})
+      .then(toJson)
+      .then(json => {
+          res.render("home.handlebars", { randomImageURL: json.urls.full })
+    });
 })
 
 app.listen(5000, ()=>{
