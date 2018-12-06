@@ -1,6 +1,6 @@
 
 const yelp = require('yelp-fusion');
-const apiKey = '';
+const apiKey = 'Ttm9T3jW7ItGLfoEF1IaUztpCbCc5BVHFgzNjAbKgz2iyEP9JTBsjYJFxYz-HBux6r4GGROqZb8AWno1CvxmretUb7l7L79FUOByZGk9s2SX9kWEXF2X3BNPcuPlW3Yx';
 // const searchRequest = {
 //     term:'Burrito',
 //     location: '2311 Warring Street, Berkeley, CA'

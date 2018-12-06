@@ -20,7 +20,7 @@
                     <h5 class="card-title">{{this.name}}</h5>
                     <p class="card-text">{{this.location.display_address}}</p>
                     {{#each this.dishResult}}
-                        <p class="card-text">{{this.name}}</p>
+                        <p class="card-text">{{this.name}}, rating: {{this.rating}}</p>
                     {{/each}}
                     <!-- <p class="card-text">{{this.location.display_address}}</p> -->
                     <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
@@ -35,7 +35,7 @@
 </div>
 
 
-<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=places" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXG4CXSpeLMYlV-1I_jpwil4nwpCiiAUM&callback=initMap&libraries=places" async defer></script>
 <script type="text/javascript">
 var map;
 var service;
