@@ -51,3 +51,4 @@ app.listen(5000, ()=>{
 })
 
 // Get rating pictures for yelp rating from here https://www.yelp.com/developers/display_requirements
+// https://stackoverflow.com/questions/48246853/best-way-to-handle-authentication-in-express
